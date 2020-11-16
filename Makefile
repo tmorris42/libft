@@ -6,13 +6,18 @@
 #    By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 13:33:17 by tmorris           #+#    #+#              #
-#    Updated: 2020/11/16 14:29:48 by tmorris          ###   ########.fr        #
+#    Updated: 2020/11/16 18:58:02 by tmorris          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c
+SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
+	   ft_memchr.c ft_memcmp.c \
+	   ft_strlen.c ft_strchr.c ft_strncmp.c ft_strrchr.c \
+	   ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
+	   ft_isprint.c ft_toupper.c ft_tolower.c \
+	   ft_strdup.c ft_strmapi.c ft_substr.c
 
 OBJS = ${SRCS:.c=.o}
 
@@ -31,3 +36,14 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+SOBJS = ${SRCS:.c=.so}
+
+$(SOBJS): %.so: %.c
+	clang -fPIC -c $< -o $@
+
+so: $(SOBJS)
+	clang --shared -o libft.so $(SOBJS)
+
+sclean: clean
+	rm -f $(SOBJS)

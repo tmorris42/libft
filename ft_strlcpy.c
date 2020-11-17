@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 20:12:35 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/17 15:00:49 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/11/17 18:47:20 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t src_len;
+	size_t	src_len;
 
 	i = 0;
 	if (!src)

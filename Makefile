@@ -6,7 +6,7 @@
 #    By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 13:33:17 by tmorris           #+#    #+#              #
-#    Updated: 2020/11/18 18:51:28 by tmorris          ###   ########.fr        #
+#    Updated: 2020/11/18 20:04:20 by tmorris          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,10 @@ SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 
 OBJS = ${SRCS:.c=.o}
 
+BONUS = ft_lstnew_bonus.c
+
+BOBJS = ${BONUS:.c=.o}
+
 all: $(NAME)
 
 $(OBJS): %.o: %.c
@@ -41,6 +45,12 @@ fclean: clean
 
 re: fclean all
 
+$(BOBJS): %.o:%.c
+	clang -c -Wall -Wextra -Werror $< -o $@
+
+bonus: $(OBJS) $(BOBJS)
+	ar rcs $(NAME) $(OBJS) $(BOBJS)
+
 SOBJS = ${SRCS:.c=.so}
 
 $(SOBJS): %.so: %.c
@@ -51,3 +61,6 @@ so: $(SOBJS)
 
 sclean: clean
 	rm -f $(SOBJS)
+
+bclean: fclean
+	rm -f $(BOBJS)

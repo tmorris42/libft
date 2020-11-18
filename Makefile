@@ -6,7 +6,7 @@
 #    By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 13:33:17 by tmorris           #+#    #+#              #
-#    Updated: 2020/11/18 22:54:28 by tmorris          ###   ########.fr        #
+#    Updated: 2020/11/18 23:35:03 by tmorris          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BOBJS)
 
 fclean: clean
 	rm -f $(NAME)
@@ -52,17 +52,3 @@ $(BOBJS): %.o:%.c
 
 bonus: $(OBJS) $(BOBJS)
 	ar rcs $(NAME) $(OBJS) $(BOBJS)
-
-SOBJS = ${SRCS:.c=.so}
-
-$(SOBJS): %.so: %.c
-	clang -fPIC -c $< -o $@
-
-so: $(SOBJS)
-	clang --shared -o libft.so $(SOBJS)
-
-sclean: clean
-	rm -f $(SOBJS)
-
-bclean: fclean
-	rm -f $(BOBJS)

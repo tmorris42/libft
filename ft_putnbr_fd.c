@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 18:43:59 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/18 19:08:22 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/11/18 22:45:38 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 	else if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
-		n *= -1;
+		ft_putnbr_fd(-1 * n, fd);
 	}
 	else if (n < 10)
 		ft_putchar_fd(n + '0', fd);

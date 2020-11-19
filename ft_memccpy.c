@@ -6,23 +6,23 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 14:04:38 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/16 16:55:06 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/11/19 16:36:56 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
 	unsigned char		stop;
 
-	d = (unsigned char*)dest;
+	d = (unsigned char*)dst;
 	s = (const unsigned char*)src;
 	stop = (unsigned char)c;
 	if (!d && !s)
-		return (dest);
+		return (dst);
 	while (n-- > 0)
 	{
 		*d++ = *s++;

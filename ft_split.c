@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 13:48:10 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/18 17:15:06 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/11/19 14:41:34 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ static int	ft_count_strs(char const *s, char c)
 			while (*s && *s != c)
 				s++;
 		}
-		else
-			s++;
 	}
 	return (count);
 }

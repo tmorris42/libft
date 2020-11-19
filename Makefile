@@ -6,7 +6,7 @@
 #    By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 13:33:17 by tmorris           #+#    #+#              #
-#    Updated: 2020/11/18 23:35:03 by tmorris          ###   ########.fr        #
+#    Updated: 2020/11/19 15:33:30 by tmorris          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,30 +25,32 @@ SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 
 OBJS = ${SRCS:.c=.o}
 
-BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
-		ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-		ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+		ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+		ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-BOBJS = ${BONUS:.c=.o}
+BONUSOBJS = ${BONUS:.c=.o}
 
 all: $(NAME)
 
 $(OBJS): %.o: %.c
-	clang -c -Wall -Wextra -Werror $< -o $@
+	gcc -c -Wall -Wextra -Werror $< -o $@
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
-	rm -f $(OBJS) $(BOBJS)
+	rm -f $(OBJS) $(BONUSOBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-$(BOBJS): %.o:%.c
-	clang -c -Wall -Wextra -Werror $< -o $@
+$(BONUSOBJS): %.o:%.c
+	gcc -c -Wall -Wextra -Werror $< -o $@
 
-bonus: $(OBJS) $(BOBJS)
-	ar rcs $(NAME) $(OBJS) $(BOBJS)
+bonus: $(OBJS) $(BONUSOBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUSOBJS)
+
+.PHONY: all re clean fclean bonus

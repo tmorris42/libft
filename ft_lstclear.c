@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 21:53:52 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/18 22:05:49 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/11/23 15:27:24 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*prev;
 
-	while (*lst)
+	while (lst && *lst)
 	{
 		prev = *lst;
 		*lst = (*lst)->next;

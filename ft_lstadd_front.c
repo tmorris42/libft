@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 21:30:37 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/18 21:42:46 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/11/24 11:58:49 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new->next = *lst;
-	*lst = new;
+	if (new && lst)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }

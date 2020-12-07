@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 13:30:18 by tmorris           #+#    #+#             */
-/*   Updated: 2020/12/03 16:25:12 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/12/07 13:57:09 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
+# define MAX(x, y) (x > y ? x : y)
+# define MIN(x, y) (x < y ? x : y)
+# define ABS(x) (x > 0 ? x : x * (-1))
 
 typedef struct	s_list
 {

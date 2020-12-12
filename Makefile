@@ -6,7 +6,7 @@
 #    By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 13:33:17 by tmorris           #+#    #+#              #
-#    Updated: 2020/12/03 16:25:40 by tmorris          ###   ########.fr        #
+#    Updated: 2020/12/12 18:43:50 by tmorris          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,16 @@ OBJS = ${SRCS:.c=.o}
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 		ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-		ft_lstclear.c ft_lstiter.c ft_lstmap.c
+		ft_lstclear.c ft_lstiter.c ft_lstmap.c \
+		gnl/get_next_line.c gnl/get_next_line_utils.c \
+		ft_printf/ft_printf.c ft_printf/flags.c \
+		ft_printf/ft_printf_utils.c \
+		ft_printf/ft_conversion_c.c \
+		ft_printf/ft_conversion_d.c \
+		ft_printf/ft_conversion_s.c \
+		ft_printf/ft_conversion_p.c \
+		ft_printf/ft_conversion_u.c \
+		ft_printf/ft_conversion_x.c \
 
 BONUSOBJS = ${BONUS:.c=.o}
 
@@ -49,6 +58,7 @@ $(BONUSOBJS): %.o:%.c
 	gcc -c -Wall -Wextra -Werror $< -o $@
 
 bonus: $(OBJS) $(BONUSOBJS)
+	rm -f $(NAME)
 	ar rcs $(NAME) $(OBJS) $(BONUSOBJS)
 
 .PHONY: all re clean fclean bonus

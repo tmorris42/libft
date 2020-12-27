@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 13:30:18 by tmorris           #+#    #+#             */
-/*   Updated: 2020/12/16 16:31:56 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/12/27 18:15:26 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,8 @@ int				get_next_line(int fd, char **next_line);
 int				ft_printf(const char *format, ...);
 int				ft_max(int a, int b);
 int				ft_min(int a, int b);
+
+void			ft_putint_fd(int i, int fd);
+void			ft_putint(int i);
 
 #endif

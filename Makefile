@@ -6,7 +6,7 @@
 #    By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 13:33:17 by tmorris           #+#    #+#              #
-#    Updated: 2020/12/12 18:43:50 by tmorris          ###   ########.fr        #
+#    Updated: 2020/12/27 18:28:01 by tmorris          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 		ft_printf/ft_conversion_p.c \
 		ft_printf/ft_conversion_u.c \
 		ft_printf/ft_conversion_x.c \
+		ft_putint_fd.c \
 
 BONUSOBJS = ${BONUS:.c=.o}
 

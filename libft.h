@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 13:30:18 by tmorris           #+#    #+#             */
-/*   Updated: 2020/12/27 18:15:26 by tmorris          ###   ########.fr       */
+/*   Updated: 2021/01/22 19:27:46 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 								void (*del)(void *));
 
 int				get_next_line(int fd, char **next_line);
-int				ft_printf(const char *format, ...);
 int				ft_max(int a, int b);
 int				ft_min(int a, int b);
 

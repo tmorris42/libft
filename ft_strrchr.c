@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:24:26 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/16 18:24:29 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/12/31 10:46:02 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ char	*ft_strrchr(const char *s, int c)
 	i = ft_strlen(s) + 1;
 	while (--i >= 0)
 		if (src[i] == match)
-			return ((void*)(&src[i]));
+			return ((void *)(&src[i]));
 	return (NULL);
 }

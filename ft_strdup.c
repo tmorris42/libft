@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 17:16:36 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/19 16:50:01 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/12/31 10:50:33 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ char	*ft_strdup(const char *s1)
 {
 	char	*new;
 
-	if (!(new = (char *)malloc(sizeof(*new) * (ft_strlen(s1) + 1))))
+	new = (char *)malloc(sizeof(*new) * (ft_strlen(s1) + 1));
+	if (!new)
 		return (NULL);
 	new = ft_memcpy(new, s1, ft_strlen(s1) + 1);
 	return (new);

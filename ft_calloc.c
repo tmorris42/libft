@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 18:52:15 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/23 15:15:55 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/12/31 10:41:51 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	char	*space;
 
-	if (!(space = (char *)malloc(count * size)))
+	space = (char *)malloc(count * size);
+	if (!space)
 		return (NULL);
 	ft_bzero(space, count * size);
 	return ((void *)space);

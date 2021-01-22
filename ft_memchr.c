@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 17:42:35 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/16 19:51:54 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/12/31 10:38:52 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (n-- > 0)
 	{
 		if (src[i] == match)
-			return ((void*)(&src[i]));
+			return ((void *)(&src[i]));
 		i++;
 	}
 	return (NULL);

@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 17:36:49 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/18 18:20:56 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/12/31 10:54:22 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static char	*ft_gen_str(char *str, int n, int sign)
 	}
 	while (n != 0)
 	{
-		str[i] = '0' + ((n % 10) * sign);
+		str[i] = '0' + ((n % 10) *(sign));
 		n = n / 10;
 		i++;
 	}
@@ -51,7 +51,7 @@ static char	*ft_gen_str(char *str, int n, int sign)
 	return (str);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		sign;
 	int		len;
@@ -68,7 +68,8 @@ char		*ft_itoa(int n)
 		i = i / 10;
 		len++;
 	}
-	if (!(str = (char *)malloc(sizeof(*str) * (len + (sign == -1) + (n == 0)))))
+	str = (char *)malloc(sizeof(*str) * (len + (sign == -1) + (n == 0)));
+	if (!str)
 		return (NULL);
 	str = ft_gen_str(str, n, sign);
 	ft_strrev(str);

@@ -74,6 +74,7 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 int				get_next_line(int fd, char **next_line);
 int				ft_max(int a, int b);
 int				ft_min(int a, int b);
+unsigned int	ft_abs(int a);
 
 void			ft_putint_fd(int i, int fd);
 void			ft_putint(int i);

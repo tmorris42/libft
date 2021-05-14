@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 13:48:10 by tmorris           #+#    #+#             */
-/*   Updated: 2020/12/30 22:27:00 by tmorris          ###   ########.fr       */
+/*   Updated: 2021/05/14 20:27:31 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	if (!s)
 		return (NULL);
-	array = (char **)ft_calloc(ft_count_strs(s, c) + 1, sizeof (char*));
+	array = (char **)ft_calloc(ft_count_strs(s, c) + 1, sizeof (char *));
 	if (!array)
 		return (NULL);
 	while (*s)

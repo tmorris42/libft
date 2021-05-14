@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 17:42:35 by tmorris           #+#    #+#             */
-/*   Updated: 2020/12/31 10:38:52 by tmorris          ###   ########.fr       */
+/*   Updated: 2021/05/14 20:26:15 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	const unsigned char	*src;
 
 	match = (unsigned char)c;
-	src = (const unsigned char*)s;
+	src = (const unsigned char *)s;
 	i = 0;
 	while (n-- > 0)
 	{

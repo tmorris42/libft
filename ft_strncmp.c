@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:24:13 by tmorris           #+#    #+#             */
-/*   Updated: 2020/12/31 10:38:28 by tmorris          ###   ########.fr       */
+/*   Updated: 2021/05/14 20:27:41 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	unsigned char	*u2;
 	size_t			i;
 
-	u1 = (unsigned char*)s1;
-	u2 = (unsigned char*)s2;
+	u1 = (unsigned char *)s1;
+	u2 = (unsigned char *)s2;
 	i = 0;
 	if (n < 1)
 		return (0);

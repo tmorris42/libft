@@ -6,13 +6,13 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:19:30 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/23 15:21:53 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/12/30 22:32:50 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

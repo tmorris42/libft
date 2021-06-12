@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 13:48:10 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/19 14:41:34 by tmorris          ###   ########.fr       */
+/*   Updated: 2021/05/14 20:27:31 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static void	ft_free_strings(char **strings)
 	free(strings);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**array;
 	int		i;
@@ -65,7 +65,8 @@ char		**ft_split(char const *s, char c)
 	i = 0;
 	if (!s)
 		return (NULL);
-	if (!(array = (char **)ft_calloc(ft_count_strs(s, c) + 1, sizeof(char*))))
+	array = (char **)ft_calloc(ft_count_strs(s, c) + 1, sizeof (char *));
+	if (!array)
 		return (NULL);
 	while (*s)
 	{
@@ -73,7 +74,8 @@ char		**ft_split(char const *s, char c)
 			s++;
 		if (*s == '\0')
 			break ;
-		if (!(array[i] = ft_substr(s, 0, ft_segment_len(s, c))))
+		array[i] = ft_substr(s, 0, ft_segment_len(s, c));
+		if (!array[i])
 		{
 			ft_free_strings(array);
 			return (NULL);

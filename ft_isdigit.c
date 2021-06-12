@@ -6,13 +6,13 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 19:35:13 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/23 15:22:45 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/12/30 22:30:46 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }

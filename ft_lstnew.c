@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 19:43:29 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/24 11:57:38 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/12/31 10:40:31 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
 
-	if (!(new = malloc(sizeof(*new))))
+	new = malloc(sizeof(*new));
+	if (!new)
 		return (NULL);
 	new->content = content;
 	new->next = NULL;

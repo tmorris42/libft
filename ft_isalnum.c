@@ -6,13 +6,13 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:15:54 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/23 15:21:37 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/12/30 22:31:50 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }

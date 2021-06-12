@@ -6,13 +6,13 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 21:35:08 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/18 21:41:58 by tmorris          ###   ########.fr       */
+/*   Updated: 2020/12/31 10:42:48 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int		len;
 

@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 13:30:18 by tmorris           #+#    #+#             */
-/*   Updated: 2021/01/22 19:33:42 by tmorris          ###   ########.fr       */
+/*   Updated: 2021/06/22 12:08:31 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,5 @@ unsigned int	ft_abs(int a);
 void			ft_putint_fd(int i, int fd);
 void			ft_putint(int i);
 
+long long int	ft_atol(const char *str);
 #endif

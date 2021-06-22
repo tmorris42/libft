@@ -27,10 +27,10 @@ long long int	ft_atol(const char *str)
 	while (ft_isdigit(str[i]))
 	{
 		value = value * 10;
-		value = value + (str[i] - '0');
+		value += (sign * (str[i] - '0'));
 		i++;
 	}
-	if ((value > 0 && sign == -1) || (value < 0 && sign == -1))
+	if ((value > 0 && sign == -1) || (value < 0 && sign == 1))
 		return (0);
-	return (value * sign);
+	return (value);
 }

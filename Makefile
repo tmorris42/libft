@@ -6,7 +6,7 @@
 #    By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 13:33:17 by tmorris           #+#    #+#              #
-#    Updated: 2021/01/22 19:28:13 by tmorris          ###   ########.fr        #
+#    Updated: 2021/06/22 12:08:03 by tmorris          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 	   gnl/get_next_line.c gnl/get_next_line_utils.c \
 	   ft_putint_fd.c \
 	   ft_max.c ft_min.c ft_abs.c \
+	   ft_atol.c
 
 OBJS = ${SRCS:.c=.o}
 

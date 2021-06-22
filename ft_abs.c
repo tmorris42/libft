@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/24 13:54:28 by tmorris           #+#    #+#             */
-/*   Updated: 2020/11/16 16:54:55 by tmorris          ###   ########.fr       */
+/*   Updated: 2021/06/21 15:13:31 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,11 @@
 
 unsigned int	ft_abs(int a)
 {
-	return (a * (-1));
+	unsigned int	result;
+
+	if (a < 0)
+		result = (unsigned int)(a * -1);
+	else
+		result = (unsigned int)a;
+	return (result);
 }

@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/11/16 13:33:17 by tmorris           #+#    #+#              #
-#    Updated: 2021/06/22 12:08:03 by tmorris          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = libft.a
 
 SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
@@ -23,7 +11,7 @@ SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 	   ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 	   ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
 	   ft_lstclear.c ft_lstiter.c ft_lstmap.c \
-	   gnl/get_next_line.c gnl/get_next_line_utils.c \
+	   get_next_line.c get_next_line_utils.c \
 	   ft_putint_fd.c \
 	   ft_max.c ft_min.c ft_abs.c \
 	   ft_atol.c

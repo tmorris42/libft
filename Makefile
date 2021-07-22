@@ -14,7 +14,8 @@ SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 	   get_next_line.c get_next_line_utils.c \
 	   ft_putint_fd.c \
 	   ft_max.c ft_min.c ft_abs.c \
-	   ft_atol.c
+	   ft_atol.c \
+	   ft_strndup.c
 
 OBJS = ${SRCS:.c=.o}
 

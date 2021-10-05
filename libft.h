@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 13:30:18 by tmorris           #+#    #+#             */
-/*   Updated: 2021/09/20 12:18:55 by tmorris          ###   ########.fr       */
+/*   Updated: 2021/10/05 11:54:20 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *str1, const char *str2, size_t len);
 int				ft_atoi(const char *str);
+long long int	ft_atol(const char *str);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);

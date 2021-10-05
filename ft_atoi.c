@@ -6,18 +6,11 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 19:06:43 by tmorris           #+#    #+#             */
-/*   Updated: 2020/12/31 10:47:19 by tmorris          ###   ########.fr       */
+/*   Updated: 2021/09/13 10:18:21 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_isspace(char c)
-{
-	if (c == ' ' || (c >= 9 && c <= 13))
-		return (1);
-	return (0);
-}
 
 int	ft_atoi(const char *str)
 {

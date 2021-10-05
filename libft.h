@@ -6,7 +6,7 @@
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 13:30:18 by tmorris           #+#    #+#             */
-/*   Updated: 2021/07/22 15:01:39 by tmorris          ###   ########.fr       */
+/*   Updated: 2021/09/20 12:18:55 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
+int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *str1, const char *str2, size_t len);
 int				ft_atoi(const char *str);
@@ -56,7 +57,7 @@ char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_putchar_fd(char c, int fd);
-void			ft_putstr_fd(char *s, int fd);
+void			ft_putstr_fd(const char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putchar(char c);
@@ -75,13 +76,12 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*d)(void *));
 void			ft_lstremove_next(t_list *list, void (*del)(void*));
 
 int				get_next_line(int fd, char **next_line);
+
 int				ft_max(int a, int b);
 int				ft_min(int a, int b);
 unsigned int	ft_abs(int a);
-
 void			ft_putint_fd(int i, int fd);
 void			ft_putint(int i);
-
 long long int	ft_atol(const char *str);
 char			*ft_strndup(const char *s1, size_t n);
 #endif

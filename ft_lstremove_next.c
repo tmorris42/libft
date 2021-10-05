@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstremove_next.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 21:53:52 by tmorris           #+#    #+#             */
-/*   Updated: 2021/08/14 15:04:52 by tmorris          ###   ########.fr       */
+/*   Created: 2021/09/12 19:19:48 by tmorris           #+#    #+#             */
+/*   Updated: 2021/09/12 19:21:57 by tmorris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstremove_next(t_list *list, void (*del)(void*))
 {
-	t_list	*prev;
+	t_list	*next;
 
-	while (lst && *lst)
-	{
-		prev = *lst;
-		*lst = (*lst)->next;
-		ft_lstdelone(prev, del);
-	}
-	*lst = NULL;
+	if (!list || !list->next)
+		return ;
+	next = list->next;
+	list->next = next->next;
+	ft_lstdelone(next, del);
 }

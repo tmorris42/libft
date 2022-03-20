@@ -63,13 +63,14 @@ SRCS		= \
 				get_next_line_utils.c \
 
 
-ifeq ($(MAKELEVEL),0)
+ifeq ($(MAKELEVEL), 0)
 CC			=	clang
 endif
-CFLAGS		= 	-c -Wall -Wextra -Werror 
+CFLAGS		= 	-c -Wall -Wextra -Werror
+INCLUDES	=	-Iincludes
 OBJ_DIR		=	objs/
-SRC_DIR		=	./
-OBJS		=	${addprefix $(OBJ_DIR),${SRCS:.c=.o}}
+SRC_DIR		=	./srcs/
+OBJS		=	${addprefix $(OBJ_DIR), ${SRCS:.c=.o}}
 
 all: $(NAME)
 
@@ -77,7 +78,7 @@ $(OBJ_DIR):
 	mkdir $(OBJ_DIR);
 
 $(OBJS): $(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJ_DIR)
-	$(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDES) $< -o $@
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)

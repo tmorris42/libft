@@ -36,9 +36,9 @@ if __name__ == "__main__":
         print(header, end="\t")
         try:
             test_output = subprocess.check_output([f'{output}'])
-            print_results(test_output, len(header), Result.KO, True)
+            print_results(test_output, len(header), Result.OK, VERBOSE)
         except subprocess.CalledProcessError as test_error:
             if test_error.returncode == 1:
-                print_results(test_error.output, len(header), Result.OK, VERBOSE)
+                print_results(test_error.output, len(header), Result.KO, True)
             else:
                 print_results(test_error.output, len(header), Result.ERROR, True)

@@ -91,4 +91,10 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:		all re clean fclean
+test: $(NAME)
+	@$(MAKE) test -sC tests
+
+debug: $(NAME)
+	@$(MAKE) debug -sC tests
+
+.PHONY:		all re clean fclean test debug

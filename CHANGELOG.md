@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - This CHANGELOG file to track changes
 - README.md to provide information on this project
+- Testing Framework to test libft functions
 
 ## [4.0.0] - 2022-03-20
 ### Added

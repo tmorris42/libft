@@ -6,6 +6,13 @@ from enum import Enum
 
 VERBOSE = False
 
+RED = "\033[0;31m"
+GREEN = "\033[0;32m"
+YELLOW = "\033[0;33m"
+
+WHITE = "\033[0;37m"
+RESET = "\033[0m"
+
 class Result(Enum):
     ERROR = -1
     KO = 0
@@ -13,18 +20,18 @@ class Result(Enum):
 
 def print_results(output, header_len, result, verbose=VERBOSE):
     if verbose:
-        print("\n==STDOUT", end="")
+        print(f"\n{YELLOW}==STDOUT", end="")
         print("=" * (header_len - 8))
-        print(output.decode('utf-8'), end="")
-        print("=" * header_len)
+        print(RESET + output.decode('utf-8'), end="")
+        print(YELLOW + ("=" * header_len) + RESET)
     if result == Result.ERROR:
-        print("ERROR!")
+        print(f"{RED}ERROR!{RESET}")
     elif result == Result.KO:
-        print("KO")
+        print(f"{RED}KO{RESET}")
     elif result == Result.OK:
-        print("OK")
+        print(f"{GREEN}OK{RESET}")
     else:
-        print("UNDEFINED")
+        print(f"{YELLOW}UNDEFINED{RESET}")
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
@@ -33,7 +40,7 @@ if __name__ == "__main__":
     for file in files:
         output = f"target/{file}"
         header = f"Running {file}"
-        print(header, end="\t")
+        print(WHITE + header + RESET, end="\t")
         try:
             test_output = subprocess.check_output([f'{output}'])
             print_results(test_output, len(header), Result.OK, VERBOSE)

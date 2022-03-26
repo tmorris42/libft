@@ -16,7 +16,7 @@ all: $(OBJS)
 $(OBJ_DIR):
 	mkdir $(OBJ_DIR);
 
-$(OBJS): $(OBJ_DIR)%.out: $(SRC_DIR)%.c | $(OBJ_DIR)
+$(OBJS): $(OBJ_DIR)%.out: $(SRC_DIR)%.c $(LIBFT) | $(OBJ_DIR)
 	$(CC) $(CFLAGS) $(INCLUDES) $< $(LIBFT) -o $@
 
 clean:

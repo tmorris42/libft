@@ -85,9 +85,11 @@ $(NAME): $(OBJS)
 
 clean:
 	rm -rf $(OBJ_DIR)
+	@$(MAKE) clean -sC tests
 
 fclean:		clean
 	rm -rf $(NAME)
+	@$(MAKE) fclean -sC tests
 
 re:			fclean all
 

@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	unsigned long long int	value;
-	int						sign;
-	int						i;
+	int	value;
+	int	sign;
+	int	i;
 
 	value = 0;
 	sign = 1;
@@ -35,7 +35,5 @@ int	ft_atoi(const char *str)
 		value = value + (str[i] - '0');
 		i++;
 	}
-	if ((value > 2147483647 && sign == 1) || (value > 2147483648 && sign == -1))
-		return ((sign == -1) - 1);
 	return ((int)(value * sign));
 }

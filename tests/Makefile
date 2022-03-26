@@ -1,5 +1,4 @@
-SRCS		= \
-	test_ft_abs.c
+SRCS		= $(notdir $(wildcard ./srcs/*.c))
 
 
 ifeq ($(MAKELEVEL), 0)

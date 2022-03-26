@@ -40,7 +40,7 @@ if __name__ == "__main__":
     for file in files:
         output = f"target/{file}"
         header = f"Running {file}"
-        print(WHITE + header + RESET, end="\t")
+        print(WHITE + header + RESET, end=" "*(35 - len(header)))
         try:
             test_output = subprocess.check_output([f'{output}'])
             print_results(test_output, len(header), Result.OK, VERBOSE)

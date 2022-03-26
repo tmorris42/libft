@@ -4,8 +4,6 @@ import subprocess
 import sys
 from enum import Enum
 
-VERBOSE = False
-
 RED = "\033[0;31m"
 GREEN = "\033[0;32m"
 YELLOW = "\033[0;33m"
@@ -18,7 +16,7 @@ class Result(Enum):
     KO = 0
     OK = 1
 
-def print_results(output, header_len, result, verbose=VERBOSE):
+def print_results(output, header_len, result, verbose=False):
     if verbose:
         print(f"\n{YELLOW}==STDOUT", end="")
         print("=" * (header_len - 8))
@@ -32,8 +30,11 @@ def print_results(output, header_len, result, verbose=VERBOSE):
         print(f"{GREEN}OK{RESET}")
     else:
         print(f"{YELLOW}UNDEFINED{RESET}")
+    if verbose:
+        print()
 
 if __name__ == "__main__":
+    VERBOSE = False
     if len(sys.argv) > 1:
         VERBOSE = True
     files = os.listdir("./target/")
@@ -46,6 +47,6 @@ if __name__ == "__main__":
             print_results(test_output, len(header), Result.OK, VERBOSE)
         except subprocess.CalledProcessError as test_error:
             if test_error.returncode == 1:
-                print_results(test_error.output, len(header), Result.KO, True)
+                print_results(test_error.output, len(header), Result.KO, VERBOSE)
             else:
-                print_results(test_error.output, len(header), Result.ERROR, True)
+                print_results(test_error.output, len(header), Result.ERROR, VERBOSE)

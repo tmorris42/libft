@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Testing Framework to test libft functions
 - Tests for ft_abs, ft_atoi
 
+### Changed
+- ft_atoi now mimics atoi's overflow behavior
+
 ## [4.0.0] - 2022-03-20
 ### Added
 - ft_strndup

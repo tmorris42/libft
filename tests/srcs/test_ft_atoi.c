@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/17 19:06:43 by tmorris           #+#    #+#             */
+/*   Updated: 2021/09/13 10:18:21 by tmorris          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include "libft.h"
 
-static int comp(int a, int b)
+static int	comp(int a, int b)
 {
 	ft_putnbr(a);
 	ft_putstr(" == ");
@@ -10,9 +22,9 @@ static int comp(int a, int b)
 	return (a == b);
 }
 
-int main()
+int	main(void)
 {
-	char *values[] = {
+	char	*values[] = {
 		"-2147483648",
 		"-5",
 		"5",
@@ -32,7 +44,7 @@ int main()
 		"2147483650",
 		"2147483648",
 		0};
-	int i;
+	int		i;
 
 	i = 0;
 	while (1)
@@ -41,8 +53,7 @@ int main()
 			return (1);
 		++i;
 		if (values[i] == 0)
-			break;
+			break ;
 	}
-
 	return (0);
 }

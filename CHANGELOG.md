@@ -10,9 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - README.md to provide information on this project
 - Testing Framework to test libft functions
 - Tests for ft_abs, ft_atoi
+- ft_atoll
 
 ### Changed
 - ft_atoi now mimics atoi's overflow behavior
+- ft_atol now mimics atol instead of atoll
 
 ## [4.0.0] - 2022-03-20
 ### Added

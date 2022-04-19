@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atol.c                                          :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmorris <tmorris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-long int	ft_atol(const char *str)
+long long int	ft_atoll(const char *str)
 {
-	long int	value;
-	int			sign;
-	int			i;
+	long long int	value;
+	int				sign;
+	int				i;
 
 	value = 0;
 	sign = 1;

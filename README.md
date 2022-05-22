@@ -62,5 +62,5 @@ C library with useful functions to perform a variety of common tasks with string
 | ft_substr			| Create a new string from a substring of a given string |
 | ft_tolower		| Convert a string to lowercase |
 | ft_toupper		| Convert a string to uppercase |
-| get_next_line		| Read the next link from a given fd |
+| get_next_line		| Read the next line from a given fd |
 

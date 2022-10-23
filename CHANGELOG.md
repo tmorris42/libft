@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - This CHANGELOG file to track changes
 - README.md to provide information on this project
 - Testing Framework to test libft functions
-- Tests for ft_abs, ft_atoi, ft_atol
+- Tests for ft_abs, ft_atoi, ft_atol, ft_atoll
 - ft_atoll
 
 ### Changed

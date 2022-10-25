@@ -4,7 +4,7 @@ SRCS		= $(notdir $(wildcard ./srcs/*.c))
 ifeq ($(MAKELEVEL), 0)
 CC			?=	clang
 endif
-CFLAGS		= 	-Wall -Wextra -Werror
+CFLAGS		= 	-Wall -Wextra -Werror -g3
 INCLUDES	=	-I../includes/
 LIBFT		=	../libft.a
 OBJ_DIR		=	target/

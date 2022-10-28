@@ -29,8 +29,7 @@ int	main(void)
 {
 	int				i;
 
-	i = INT_MIN;
-  i = -1;
+	i = INT_MIN + 1;
 	while (1)
 	{
 		if (!comp(ft_isalnum(i), isalnum(i)))

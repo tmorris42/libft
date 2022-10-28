@@ -12,16 +12,13 @@
 
 #include <ctype.h>
 #include "libft.h"
-#include <stdio.h>
-#include <limits.h>
 
 static int	comp(int a, int b)
 {
-	// ft_putnbr(a);
-	// ft_putstr(" == ");
-	// ft_putnbr(b);
-	// ft_putchar('\n');
-  printf("%d == %d\n", a, b);
+	ft_putnbr(a);
+	ft_putstr(" == ");
+	ft_putnbr(b);
+	ft_putchar('\n');
 	return ((a > 0) == (b > 0));
 }
 
@@ -29,15 +26,11 @@ int	main(void)
 {
 	int				i;
 
-	i = INT_MIN;
-  i = -1;
-	while (1)
+	i = 0;
+  	while (1)
 	{
 		if (!comp(ft_isalnum(i), isalnum(i)))
-    {
-      printf("i = %d\n", i);
 			return (1);
-    }
 		++i;
 		if (i == 256)
 			break ;
